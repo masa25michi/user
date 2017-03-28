@@ -10,7 +10,7 @@ class DB {
     // private $db_pasword = "migdzart"; // db password
     // private $db_server = "mysql.comp.polyu.edu.hk"; // db server
 
-    private $db_name = "14116974d"; // db name
+    private $db_name = "conference"; // db name
     private $db_user = "root";// db user
     private $db_pasword = "root"; // db password
     private $db_server = "127.0.0.1"; // db server
@@ -38,7 +38,7 @@ class DB {
     }
 
     public function query($sql){
-        $statement = $this->connectin->prepare($sql);
+        $statement = $this->connection->prepare($sql);
         $statement->execute();
         return $statement;
     }
